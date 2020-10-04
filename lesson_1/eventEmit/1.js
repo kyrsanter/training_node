@@ -10,7 +10,7 @@ storage.on('data', (data) => {   // calls first with the same event name "data"
 
 storage.on('data', (data) => { // calls second with the same event name "data"
 	console.log(data) // { name: 'Vasya', age: 26, prop: 'old' }
-})
+}) // to call this first - need to change "on" to "prependListener"
 
 storage.emit('data', {
 	name: 'Vasya',
